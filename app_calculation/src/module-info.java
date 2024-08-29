@@ -1,5 +1,6 @@
 //modulos agrupam conjuntos de pacotes e pacotes agrupam conjuntos de classes
-module app.calculation {
+//modulo aberto libera por completo o modulo
+open module app.calculation {
 	
 	//requerendo o pacote logging
 	//o transitive é para marcar que o pacote que foi requerido pode ser acessado para outros modulos terceirros
@@ -16,5 +17,8 @@ module app.calculation {
 	acesso a esse pacote basta separar por virgula
 	*/
 	exports br.com.cod3r.app.calculation.internal to app.financial;
+	
+	//abrindo pacotes individuais e para outros pacotes especificios
+	//opens br.com.cod3r.app.calculation to app_logging, app.financial;
 	
 }
