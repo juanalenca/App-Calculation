@@ -20,5 +20,8 @@ open module app.calculation {
 	
 	//abrindo pacotes individuais e para outros pacotes especificios
 	//opens br.com.cod3r.app.calculation to app_logging, app.financial;
-	
+
+	requires app.api;
+		provides br.com.cod3r.app.Calculator 
+			with br.com.cod3r.app.calculation.CalculatorImpl;
 }
